@@ -15,7 +15,7 @@ import java.util.List;
 @RequestMapping
 @CrossOrigin("http://localhost:4200/")
 public class BookController {
-    private BookRepo bookRepo;
+    private final BookRepo bookRepo;
 
     public BookController (BookRepo bookRepo){ this.bookRepo=bookRepo;
     }

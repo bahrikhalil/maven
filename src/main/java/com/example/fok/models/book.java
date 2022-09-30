@@ -1,9 +1,9 @@
 package com.example.fok.models;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
 import javax.persistence.*;
 
@@ -14,10 +14,12 @@ import javax.persistence.*;
 public class book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @NotNull
     private Integer bookid;
     private String name;
+    @NotNull
     private String pwd;
-    @NonNull
+    @NotNull
     private int price;
 
 }
